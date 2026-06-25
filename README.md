@@ -1,6 +1,6 @@
 # Multi-Modal Attendance System
 
-An automated attendance tracking system that uses **simultaneous face and voice recognition** to identify students and log attendance — no manual input required.
+An automated attendance tracking system that uses **simultaneous face and voice recognition** to identify students and log attendance, no manual input required.
 
 ---
 
@@ -181,8 +181,3 @@ Occurs when a student was enrolled with MFCC features but the current session us
 **`Already marked for today`**
 The attendance table enforces `UNIQUE(student_id, date)`. Each student can only be marked once per calendar day by design.
 
----
-
-## License
-
-MIT License. See `LICENSE` for details.
