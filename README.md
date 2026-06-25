@@ -6,15 +6,15 @@ An automated attendance tracking system that uses **simultaneous face and voice 
 
 ## Features
 
-- **Dual-modal authentication** — face and voice recognition run in parallel via separate threads; the higher-confidence result wins
-- **ArcFace face recognition** — deep learning-based face embeddings with a trained SVM classifier
-- **ECAPA-TDNN voice verification** — speaker embeddings with Adaptive Score Normalization (AS-norm) for robust matching
-- **Fusion decision engine** — combines or arbitrates between modalities; boosts confidence when both agree on the same student
-- **SQLite persistence** — stores student profiles, face encodings, voice samples, attendance records, and voice enrollment status
-- **Automatic database initialization** — schema is created on first run with no manual setup
-- **Attendance reporting** — query records by date or pull the full history as a DataFrame
-- **Database backups** — timestamped `.db` snapshots with a single command
-- **CLI menu** — register students, mark attendance, view reports, retrain classifier, and more
+- **Dual-modal authentication** - face and voice recognition run in parallel via separate threads; the higher-confidence result wins
+- **ArcFace face recognition** - deep learning-based face embeddings with a trained SVM classifier
+- **ECAPA-TDNN voice verification** - speaker embeddings with Adaptive Score Normalization (AS-norm) for robust matching
+- **Fusion decision engine** - combines or arbitrates between modalities; boosts confidence when both agree on the same student
+- **SQLite persistence** - stores student profiles, face encodings, voice samples, attendance records, and voice enrollment status
+- **Automatic database initialization** - schema is created on first run with no manual setup
+- **Attendance reporting** - query records by date or pull the full history as a DataFrame
+- **Database backups** - timestamped `.db` snapshots with a single command
+- **CLI menu** - register students, mark attendance, view reports, retrain classifier, and more
 
 ---
 
@@ -22,7 +22,7 @@ An automated attendance tracking system that uses **simultaneous face and voice 
 
 ```
 .
-├── app.py                   # Core system logic and CLI entry point
+├── integrated.py                   # Core system logic and CLI entry point
 ├── FaceRecognition.py       # AttendanceSystem, FaceCapture (face pipeline)
 ├── VoiceRecognition.py      # VoiceVerifier, VoiceRecorder (voice pipeline)
 ├── database/
@@ -70,7 +70,7 @@ pip install -r requirements.txt
 ### 2. Run the system
 
 ```bash
-python app.py
+python integrated.py
 ```
 
 The database and required directories are created automatically on first run.
