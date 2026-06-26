@@ -160,7 +160,7 @@ Choose **Option 2**. Face and voice recognition run simultaneously for up to 10 
 - **Minimum face captures for registration:** 5 images (10 attempted)
 - **Minimum face encodings to proceed:** 3 successful extractions
 
-To adjust these, modify the constants directly in `app.py` and `VoiceRecognition.py`.
+To adjust these, modify the constants directly in `inegrated.py` and `VoiceRecognition.py`.
 
 ---
 
@@ -170,7 +170,7 @@ To adjust these, modify the constants directly in `app.py` and `VoiceRecognition
 Ensure no other application is using the webcam. Try changing `cv2.VideoCapture(0)` to `cv2.VideoCapture(1)` if you have multiple cameras.
 
 **`FaceRecognition` or `VoiceRecognition` import errors**
-The system degrades gracefully — a warning is printed and the unavailable modality is skipped. Ensure all dependencies are installed and module files are in the same directory as `app.py`.
+The system degrades gracefully, a warning is printed and the unavailable modality is skipped. Ensure all dependencies are installed and module files are in the same directory as `integrated.py`.
 
 **Voice: "No voice detected"**
 The amplitude threshold is `100` (raw int16). Check microphone permissions and ensure the mic is not muted at the OS level.
